@@ -28,6 +28,10 @@ The following example starts a Redis container and configures it to always resta
 or
 `$ docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 br0`
 
+Change name
+
+` $ docker network create --driver=bridge --opt com.docker.network.bridge.name=ens17 --subnet=172.27.0.0/16 --ip-range=172.27.6.0/24 --gateway=172.27.6.254 ens17`
+
 # Connect interface
 
 `$ docker container ls`
@@ -37,3 +41,4 @@ or
 `$docker network ls`
 
 `docker network inspect 8b7c3f831f6b`
+
