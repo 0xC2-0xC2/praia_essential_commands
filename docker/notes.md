@@ -27,3 +27,13 @@ The following example starts a Redis container and configures it to always resta
 `$ docker network create -d bridge --subnet=10.11.0.0/16 ens17 `
 or
 `$ docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 br0`
+
+# Connect interface
+
+`$ docker container ls`
+
+`$docker run --network=br0 -itd --name=0188e81084fe debian`
+
+`$docker network ls`
+
+`docker network inspect 8b7c3f831f6b`
