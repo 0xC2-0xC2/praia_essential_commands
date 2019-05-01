@@ -25,3 +25,5 @@ The following example starts a Redis container and configures it to always resta
 # Create interface
 
 `$ docker network create -d bridge --subnet=10.11.0.0/16 ens17 `
+or
+`$ docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 br0`
