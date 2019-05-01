@@ -32,6 +32,8 @@ Change name
 
 ` $ docker network create --driver=bridge --opt com.docker.network.bridge.name=ens17 --subnet=172.27.0.0/16 --ip-range=172.27.6.0/24 --gateway=172.27.6.254 ens17`
 
+`$ docker network create --driver=bridge --opt com.docker.network.bridge.name=ens18 --subnet=10.11.0.0/16 --ip-range=10.11.1.0/24 --gateway=10.11.1.1 ens18`
+
 # Connect interface
 
 `$ docker container ls`
