@@ -1,4 +1,4 @@
-# install docker
+# Install docker
 
 But first, let's update the package database:
 
