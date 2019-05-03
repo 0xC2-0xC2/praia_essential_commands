@@ -44,3 +44,10 @@ Change name
 
 `docker network inspect 8b7c3f831f6b`
 
+
+For the created containers use docker update to update restart policy.
+
+`$ docker update --restart=always 0576df221c0b`
+
+0576df221c0b is the container id.
+
